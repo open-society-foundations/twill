@@ -317,6 +317,7 @@
     .ql-editor {
       background-color: $color__f--bg;
       min-height:15px * 6;
+      max-height:450px;
       caret-color: $color__action;
       color:$color__text--forms;
 

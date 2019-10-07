@@ -34,7 +34,6 @@
 </template>
 
 <script>
-  import debounce from 'lodash/debounce'
   import randKeyMixin from '@/mixins/randKey'
   import FormStoreMixin from '@/mixins/formStore'
   import InputframeMixin from '@/mixins/inputFrame'
@@ -188,7 +187,7 @@
 
         this.$emit('change', value)
       },
-      getOptions: debounce(function (search, loading) {
+      getOptions: function (search, loading) {
         if (!this.isAjax) return true
 
         loading(true)
@@ -209,7 +208,7 @@
           // error callback
           loading(false)
         })
-      }, 500)
+      }
     }
   }
 </script>
