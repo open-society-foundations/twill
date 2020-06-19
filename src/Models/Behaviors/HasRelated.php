@@ -53,7 +53,7 @@ trait HasRelated
                 'subject_id' => $this->getKey(),
                 'subject_type' => $this->getMorphClass(),
                 'related_id' => $values['id'],
-                'related_type' => $values['endpointType'],
+                'related_type' => $values['endpointType'] ?? '',
                 'browser_name' => $browser_name,
                 'position' => $position,
             ]);
